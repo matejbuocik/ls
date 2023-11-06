@@ -1,0 +1,17 @@
+[package]
+name = "ls"
+version = "0.1.0"
+edition = "2021"
+description = "List information about the FILEs (the current directory by default). Sort entries alphabetically."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+byte-unit = "4.0.19"
+chrono = "0.4.31"
+clap = { version = "4.4.6", features = ["derive"] }
+colored = "2.0.4"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+users = "0.11.0"
